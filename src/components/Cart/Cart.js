@@ -9,8 +9,8 @@ const Cart = (props) => {
             <h1>This is Cart</h1>
             <ul>
                 {
-                    cart.map(id => <li>{id} <button
-                    onClick={()=> removeFromCart(id)}> X</button> </li> )
+                    cart.map(pd => <li key={pd.cartId}>{pd.name} <button
+                    onClick={()=> removeFromCart(pd.cartId)}> X</button> </li> )
                 }
             </ul>
         </div>
@@ -25,6 +25,6 @@ const mapStateToProps = state =>{
 
 
 const mapDespatchToProps = {
-    removeFromCart =removeFromCart
+    removeFromCart: removeFromCart
 }
 export default connect(mapStateToProps, mapDespatchToProps)(Cart);

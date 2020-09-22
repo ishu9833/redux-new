@@ -7,7 +7,7 @@ const Product = (props) => {
         <div style={{border: '1px solid lightGray', width: '50%', padding:'10px', margin:'5px'}}>
             <h3>Laptop Brand</h3>
             <p>: {name}</p>
-            <button onClick={() => addToCart(product.id)}>Add to cart</button>
+            <button onClick={() => addToCart(product.id, product.name)}>Add to cart</button>
         </div>
     );
 };
